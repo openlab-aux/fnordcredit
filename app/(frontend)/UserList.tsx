@@ -48,7 +48,10 @@ export default function UserList({ users }: { users: User[] }) {
     return 0;
   };
   const sortRecent = (x: User, y: User) => {
-    return y.updatedAt.getTime() - x.updatedAt.getTime();
+    const yThing = new Date(y.updatedAt);
+    const xThing = new Date(x.updatedAt);
+
+    return yThing.getTime() - xThing.getTime();
   };
   return (
     <>

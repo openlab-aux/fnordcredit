@@ -28,7 +28,7 @@ export default function SlideInMenu(props: SlideInMenuProps) {
         onClick={() => setOpen(true)}
         className={
           "mx-2 shadow-white hover:text-white hover:drop-shadow-lg " +
-            props.className ?? ""
+          props.className
         }
       >
         <span className="sr-only">Open menu</span>

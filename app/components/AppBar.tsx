@@ -16,7 +16,7 @@ export default function AppBar({ children, ...props }: AppBarProps) {
     <div
       className={
         "flex h-16 bg-primary-500 px-8 py-3 text-slate-200 drop-shadow-lg " +
-          props.className ?? ""
+        props.className
       }
     >
       <SlideInMenu

@@ -4,11 +4,10 @@ import ProductButton from "./ProductButton";
 import { updateCash } from "@actions/ProductList/updateCash";
 import { buyProduct } from "@actions/ProductList/buyProduct";
 
-export default async function ProductView({
-  params,
-}: {
-  params: { id: string };
+export default async function ProductView(props: {
+  params: Promise<{ id: string }>;
 }) {
+  const params = await props.params;
   const productCategories = await prisma.productCategory.findMany({
     select: {
       name: true,

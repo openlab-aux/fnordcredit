@@ -11,8 +11,7 @@ import TransactionsList from "./TransactionsList";
 import { Transaction, User } from "@prisma/client";
 import Icon from "@mdi/react";
 import Link from "next/link";
-import { FormEvent, ReactNode, useState } from "react";
-import { useFormState } from "react-dom";
+import { FormEvent, ReactNode, useState, useActionState } from "react";
 import { useClickAway } from "@uidotdev/usehooks";
 
 function MenuItem({
@@ -48,7 +47,7 @@ interface InfoCardProps {
 }
 
 export default function InfoCard({ user, action }: InfoCardProps) {
-  const [state, formAction] = useFormState(action, false);
+  const [state, formAction] = useActionState(action, false);
   const [clientState, setClientState] = useState(false);
   // Bypass the form action request when js is enabled
   const clientHandler = (e: FormEvent<HTMLFormElement>) => {

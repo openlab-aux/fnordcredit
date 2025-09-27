@@ -2,7 +2,7 @@
 import { revalidateUsers } from "@cache/users";
 import prisma from "@lib/prisma";
 import { IsNotEmpty, IsString, MaxLength, validate } from "class-validator";
-import { isRedirectError } from "next/dist/client/components/redirect";
+import { isRedirectError } from "next/dist/client/components/redirect-error";
 import { redirect } from "next/navigation";
 
 class CreateUserDTO {

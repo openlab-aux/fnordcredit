@@ -4,44 +4,49 @@
     "seed": "npx ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.js"
   },
   "scripts": {
-    "dev": "prisma generate && prisma migrate reset && next dev",
+    "dev": "prisma generate && prisma migrate reset && next dev --turbopack",
     "build": "prisma generate && prisma migrate deploy && next build",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.18",
+    "@headlessui/react": "^2.2.9",
     "@mdi/js": "^7.4.47",
     "@mdi/react": "^1.6.1",
-    "@prisma/client": "5.9.1",
+    "@prisma/client": "6.16.2",
     "@tailwindcss/forms": "^0.5.7",
     "class-validator": "^0.14.1",
     "cors": "^2.8.5",
-    "next": "14.1.0",
-    "path-to-regexp": "^6.2.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "next": "15.5.4",
+    "path-to-regexp": "^8.3.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
   },
   "devDependencies": {
-    "@types/node": "^20.11.16",
-    "@types/react": "18.2.55",
-    "@types/react-dom": "^18.2.18",
+    "@tailwindcss/postcss": "^4.1.13",
+    "@types/node": "^24.5.2",
+    "@types/react": "19.1.14",
+    "@types/react-dom": "19.1.9",
     "@uidotdev/usehooks": "^2.4.1",
     "autoprefixer": "^10.4.17",
-    "eslint": "8.56.0",
-    "eslint-config-next": "14.1.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-jsdoc": "^48.0.6",
+    "eslint": "9.36.0",
+    "eslint-config-next": "15.5.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jsdoc": "^60.4.1",
     "husky": "^9.0.10",
-    "lint-staged": "^15.2.2",
+    "lint-staged": "^16.2.1",
     "postcss": "^8.4.34",
     "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.11",
-    "prisma": "^5.9.1",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "prisma": "^6.16.2",
     "sass": "^1.70.0",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^4.1.13",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
+  },
+  "resolutions": {
+    "@types/react": "19.1.14",
+    "@types/react-dom": "19.1.9"
   }
 }

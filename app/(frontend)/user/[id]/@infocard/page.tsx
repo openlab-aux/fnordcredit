@@ -6,11 +6,10 @@ async function toggleMenu(f: boolean) {
   return !f;
 }
 
-export default async function InfoCardServer({
-  params,
-}: {
-  params: { id: string };
+export default async function InfoCardServer(props: {
+  params: Promise<{ id: string }>;
 }) {
+  const params = await props.params;
   const user = await prisma.user.findUniqueOrThrow({
     select: {
       id: true,
